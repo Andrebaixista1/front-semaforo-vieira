@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/[...proxy].js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
@@ -10,7 +14,8 @@
     }
   ],
   "env": {
-    "REACT_APP_API_BASE_URL": "https://ubuntu.sistemavieira.com.br:8003"
+    "REACT_APP_API_BASE_URL": "/api",
+    "UPSTREAM_API_BASE": "https://ubuntu.sistemavieira.com.br:8003"
   },
   "routes": [
     { "handle": "filesystem" },
