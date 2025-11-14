@@ -10,7 +10,7 @@
     }
   ],
   "env": {
-    "REACT_APP_API_BASE_URL": "http://85.31.61.242:8003"
+    "REACT_APP_API_BASE_URL": "https://ubuntu.sistemavieira.com.br:8003"
   },
   "routes": [
     { "handle": "filesystem" },

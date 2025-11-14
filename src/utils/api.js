@@ -2,7 +2,7 @@
 // Resolve API base URL with env override and forced fallback for the remote API.
 
 const rawEnvUrl = (process.env.REACT_APP_API_BASE_URL || '').trim();
-const FORCED_BASE_URL = 'http://85.31.61.242:8003';
+const FORCED_BASE_URL = 'https://ubuntu.sistemavieira.com.br:8003';
 
 export const API_BASE_URL = (() => {
   // 1) If an environment variable provides the full URL, prefer it.
