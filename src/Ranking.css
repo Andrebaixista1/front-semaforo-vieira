@@ -1,0 +1,130 @@
+/* RANKING DE VENDEDORES
+
+/* Container principal do ranking */
+.ranking-container {
+  background-color: #111;  /* Fundo preto */
+  color: #fff;
+  padding: 20px;
+  width: 100%;  /* Ocupa toda a largura da tela */
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow-x: auto;  /* Permite rolagem horizontal se necessário */
+  max-width: 100%;
+}
+
+/* Título do ranking */
+.ranking-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #066eea;  /* Azul da empresa */
+}
+
+/* Lista de ranking */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Item de ranking (cada vendedor) */
+.ranking-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 900px; /* Largura aumentada */
+  margin: 0 auto;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Foto do vendedor */
+.ranking-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ranking-photo img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff; /* Borda branca ao redor da foto */
+}
+
+/* Detalhes do vendedor */
+.ranking-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 20px;
+}
+
+/* Posição no ranking (agora à esquerda da foto) */
+.ranking-position {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #066eea; /* Azul da empresa */
+  margin-right: 20px;
+  order: 0;  /* Garantir que a posição fique à esquerda */
+}
+
+/* Nome do Vendedor (em negrito e com destaque) */
+.ranking-name {
+  font-size: 1.8rem;
+  font-weight: bold; /* Nome em negrito */
+  color: #fff; /* Destaque no nome */
+  margin-bottom: 5px;
+}
+
+/* Valor Vendido (agora no lugar da posição, à esquerda) */
+.ranking-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #066eea;  /* Azul da empresa */
+  margin-top: 5px;
+  order: -1;  /* Move o valor para a esquerda, acima do nome */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .ranking-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ranking-position {
+    font-size: 2.5rem;
+    margin-bottom: 10px;  /* Espaçamento extra em telas pequenas */
+  }
+
+  .ranking-photo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ranking-details {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .ranking-name {
+    font-size: 1.6rem;
+  }
+
+  .ranking-value {
+    font-size: 1.5rem;
+  }
+}
