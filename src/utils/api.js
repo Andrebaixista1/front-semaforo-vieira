@@ -23,6 +23,15 @@ export const API_BASE_URL = (() => {
 export function apiUrl(path = '') {
   const base = API_BASE_URL || '';
   if (!path) return base;
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  let normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
+  if (base === '/api') {
+    if (normalizedPath === '/api') {
+      normalizedPath = '';
+    } else if (normalizedPath.startsWith('/api/')) {
+      normalizedPath = normalizedPath.replace(/^\/api/, '');
+    }
+  }
+
   return `${base}${normalizedPath}`;
 }

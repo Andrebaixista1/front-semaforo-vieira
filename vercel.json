@@ -18,6 +18,7 @@
     "UPSTREAM_API_BASE": "https://ubuntu.sistemavieira.com.br:8003"
   },
   "routes": [
+    { "src": "/api/(.*)", "dest": "/api/[...proxy].js" },
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
   ]
